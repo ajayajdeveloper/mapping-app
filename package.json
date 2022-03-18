@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": { 
-    "node": "8.9.4" ,
-    "npm" : "6.14.13"
-},
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13"
+  },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.6",
-    "nodemon": "^2.0.15",
-    "bcrypt": "^5.0.1"
+    "nodemon": "^2.0.15"
   },
-
   "scripts": {
     "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
