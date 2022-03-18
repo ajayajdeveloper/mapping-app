@@ -15,7 +15,7 @@
     "mongoose": "^6.2.6",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
+
   "scripts": {
     "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
