@@ -60,7 +60,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const allPins = await axios.get("/pins");
+        const allPins = await axios.get("https://map-locate.herokuapp.com/api/pins");
         setPins(allPins.data);
       } catch (err) {
         console.log(err);
