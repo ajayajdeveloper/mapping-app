@@ -14,8 +14,8 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.6",
     "nodemon": "^2.0.15",
+    "path": "^0.12.7",
     "react-map-gl": "^7.0.10"
-
   },
   "scripts": {
     "client-install": "npm install --prefix client",

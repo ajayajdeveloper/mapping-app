@@ -5,6 +5,7 @@ const app = express();
 const pinRoute = require("./routes/pins")
 const userRoute = require("./routes/users")
 const cors = require("cors")
+const path  =  require('path');
 
 dotenv.config()
 
@@ -31,12 +32,18 @@ app.use("/api/pins",pinRoute)
 //     });
 // }
 
-if(process.env.NODE_ENV === 'production'){
-    const path  =  require('path');
-    app.get('/*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-    })
-}
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
+
+// if(process.env.NODE_ENV === 'production'){
+    
+//     app.get('/*',(req,res)=>{
+//         res.sendFile(path.resolve(__dirname,'client/build/index.html'))
+//     })
+// }
  
 
 app.listen(process.env.PORT || 5000 ,() =>
